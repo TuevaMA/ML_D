@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>От Туевой</title>
+</head>
+<body>
+ <h2>Здесь будет предсказана цена квартиры</h2>
+  <p>{{message}}</p>
+<form method="POST" >{% csrf_token %}
+    <p> Этаж квартиры:{{ form.floorNumber }}</p>
+      <p> Этажность дома:   {{ form.floorsTotal }}</p>
+       <p> Площадь квартиры:   {{ form.totalArea }}</p>
+    <p> Площадь кухни:{{ form.kitchenArea }}</p>
+      <p> Латитуда:   {{ form.latitude }}</p>
+       <p> Лонгитуда:   {{ form.longitude }}</p>
+      <button type="submit" >Выполнить прогноз</button>
+</form>
+   <h3>
+     <p> Цена квартиры Туевой = {{predicted}}</p>
+   </h3>
+</body>
+</html>

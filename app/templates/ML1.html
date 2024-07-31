@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Здесь будут распознаны изображения</h2>
+<form method="POST" >{% csrf_token %}
+        <div >
+            <input id="radio-1" type="radio" name="radio" value="1" checked>
+            <label for="radio-1">Изображение 1</label>
+        </div>
+
+        <div class="form_radio_btn">
+            <input id="radio-2" type="radio" name="radio" value="2"  checked>
+            <label for="radio-2">Изображение 2</label>
+        </div>
+          <div class="form_radio_btn">
+            <input id="radio-3" type="radio" name="radio" value="3"  checked>
+            <label for="radio-3">Изображение 3</label>
+        </div>
+            <div class="form_radio_btn">
+            <input id="radio-4" type="radio" name="radio" value="4"  checked>
+            <label for="radio-4">Изображение 4</label>
+        </div>
+          <div class="form_radio_btn">
+            <input id="radio-5" type="radio" name="radio" value="5"  checked>
+            <label for="radio-5">Изображение 5</label>
+        </div>
+      <div class="form_radio_btn">
+            <input id="radio-6" type="radio" name="radio" value="6"  checked>
+            <label for="radio-6">Изображение 6</label>
+        </div>
+        <input type="submit" value="Распознать">
+</form>
+   <p>
+       <img src="../../static/images/{{IM_name}}.jpg" id="ris" width  = "300" height = "200">
+   </p>
+   <h3>
+   <p>Распознана:{{por}}</p>
+   <p> вероятность = {{ver}}</p>
+   </h3>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h2>Здесь будет предсказан уход клиента из банка</h2>
+ <h3> Введите сведения о клиенте банка </h3>
+ <p>{{message}}</p>
+<form method="POST" >{% csrf_token %}
+    <p> Код города:{{ form.kod_city }}</p>
+      <p> Возраст:   {{ form.age }}</p>
+       <p> Сумма на счете($):   {{ form.money }}</p>
+      <button type="submit" >Выполнить прогноз</button>
+</form>
+   <h3>
+     <p> Прогноз ухода клиента из банка = {{predicted}}</p>
+   </h3>
+</body>
+</html>
